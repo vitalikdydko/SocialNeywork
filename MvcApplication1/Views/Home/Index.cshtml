@@ -1,0 +1,44 @@
+﻿@using Web.Models
+@model UserViewModel
+           
+
+@{
+    ViewBag.Title = Model.UserPage.SecondName + " " + Model.UserPage.FirstName + " " + Model.UserPage.MiddleName;
+         Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="border: 1px solid red; padding:5px 5px 5px 5px">
+    @if(Model.UserIsMe)
+    {
+        <div>Ето ви!!!</div>
+    }
+    else if (Model.UserIsMyFriend)
+    {
+                <div>
+            Этот пользователь у вас в друзьях. @Html.ActionLink("Написать сообщение", "NewMessage", "Messages", new { userToId = Model.UserPage.Id },null)
+            или
+            @Html.ActionLink("Удалить из друзей", "DeleteFriend", "Friends", new { id = Model.UserPage.Id }, null)
+        </div>
+    }
+    else if (Model.FriendRequestIsSent)
+    {
+        <div>
+            Вы отправили заявку в друзья. Необходимо подождать пока этот пользователь подтвердит ее.
+            @Html.ActionLink("Отменить свою заявку", "CancelFriendRequest", "Friends", new { id = Model.UserPage.Id }, null)
+        </div>
+    }
+    else
+    {
+        <div>@Html.ActionLink("Добавить в друзья", "AddFriendRequest", "Friends", new { id = Model.UserPage.Id }, null)</div>
+    }
+
+</div>
+<p>
+    Фамилия: <b>@Model.UserPage.SecondName</b>
+</p>
+<p>
+    Имя: <b>@Model.UserPage.FirstName</b>
+</p>
+<p>
+    Отчество: <b>@Model.UserPage.MiddleName</b>
+</p>

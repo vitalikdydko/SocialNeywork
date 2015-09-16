@@ -1,0 +1,22 @@
+﻿@using Domain.Entities
+@model OutgoingMessage
+
+@{
+    ViewBag.Title = "Новое сообщения";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Новое сообщения</h2>
+
+@using(Html.BeginForm())
+{
+    @Html.HiddenFor(x=>x.UserId)
+    @Html.HiddenFor(x=>x.UserToId)
+    @Html.HiddenFor(x=>x.CreatedDate)
+    <p>
+        Введите текст сообщения:<br />
+        @Html.TextAreaFor(x=>x.Text)
+        @Html.ValidationMessageFor(x=>x.Text)
+    </p>
+    <input type="submit" value="отправить" />
+}

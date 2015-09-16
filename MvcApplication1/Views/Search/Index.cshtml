@@ -1,0 +1,37 @@
+﻿@using Domain.Entities
+@model IEnumerable<User>
+@{
+    ViewBag.Title = "Поиск";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Поиск пользователей</h2>
+<div>
+    @using(@Html.BeginForm())
+    {
+        <p>
+            Попробуйте найти пользователя по ФИО:
+        </p>
+        <p>
+            Фамилия: @Html.TextBox("secondName")
+        </p>
+        <p> 
+             Имя: @Html.TextBox("firstName")
+    </p>
+        <p>
+            Отчество: @Html.TextBox("middleName")
+        </p>
+        <input type="submit" value="Поиск" />
+    }
+</div>
+@if(Model!=null && Model.Any())
+{
+<p>Результат поиска:</p>
+    foreach(User user in Model)
+    {
+        <div>
+            @Html.ActionLink(user.SecondName + "" + user.FirstName + "" + user.MiddleName, "Index", "Home", new { id = user.Id }, null);
+        </div>
+    }
+
+}

@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>VD</title>
+    <link rel=StyleSheet href="style.css" type="text/css" media=screen>
+    
+    <link href="@Url.Content("~/Content/style.css")" rel="stylesheet" type="text/css" />
+    
+    <script src="@Url.Content("~/Scripts/jquery-2.1.4.min.js")" type="text/javascript"></script>
+</head>
+<body>
+    <div id="page">
+        <div id="header">
+            <h1>SocialNetwork</h1>
+            
+        </div>
+        
+        
+            <div id="sidebar">
+@if (User.Identity.IsAuthenticated)
+{
+    <div>
+        <ul>
+   <li> @Html.ActionLink(@Resources.Resource.Mypage, "Index", "Home")</li>
+   <li> @Html.ActionLink(@Resources.Resource.Myfriends, "Index", "Friends")</li>
+   <li> @Html.ActionLink(@Resources.Resource.Mymessage, "Index", "Messages")</li>
+   <li> @Html.ActionLink(@Resources.Resource.Sourch, "Index", "Search")</li>
+  <li>  @Html.ActionLink(@Resources.Resource.Photo, "Edit", "Account")</li>
+  <li>  @Html.ActionLink(@Resources.Resource.Exit, "Logout", "Account")</li>
+            </ul>
+        </div>
+}
+
+                </div>
+                                   
+                   
+            
+                 
+           
+        <div id="mainarea">
+            @using (Html.BeginForm("ChangeCulture", "Home"))
+            {
+                <select name="lang">
+                    <option disabled selected>@Resources.Resource.ChooseLang</option>
+                    <option value="ru">RU</option>
+                    <option value="en">EN</option>
+                    <option value="de">DE</option>
+                </select>
+                <input type="submit" name="submit" value="@Resources.Resource.ChooseLang">
+            }
+                
+            @RenderBody()
+        </div>
+              
+                <div id="footer">
+            SocialNetwork by VD
+        </div>
+
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+C:\Users\Vitalik-PK\Documents\SocialNetwork\UnitTests\bin\Debug\UnitTests.dll
+C:\Users\Vitalik-PK\Documents\SocialNetwork\UnitTests\bin\Debug\UnitTests.pdb
+C:\Users\Vitalik-PK\Documents\SocialNetwork\UnitTests\obj\Debug\UnitTests.csprojResolveAssemblyReference.cache
+C:\Users\Vitalik-PK\Documents\SocialNetwork\UnitTests\obj\Debug\UnitTests.dll
+C:\Users\Vitalik-PK\Documents\SocialNetwork\UnitTests\obj\Debug\UnitTests.pdb

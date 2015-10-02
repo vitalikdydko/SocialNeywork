@@ -1,0 +1,35 @@
+﻿@using Web.Models
+@model List<MusicModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<h2>Моя музыка</h2>
+
+
+<p>
+    @Html.ActionLink("Добавить музыку", "CreateMusic")
+</p>
+
+
+@foreach (var item in Model)
+{
+
+   <br />
+    <p> <cite>@ViewBag.Name</cite></p>
+
+    <audio controls>
+        <source src="~/Files/music/@item.File">
+
+        <p>Ваш браузер не поддерживает аудио</p>
+    </audio>
+   
+
+}
+
+

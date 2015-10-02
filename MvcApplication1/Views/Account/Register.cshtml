@@ -1,11 +1,11 @@
 ﻿@using Web.Models
 @model RegisterModel
 @{
-    ViewBag.Title = @Resources.Resource.RegisterView;
+    ViewBag.Title = "Регистрация";
 Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@Resources.Resource.RegisterView</h2>
+<h2>Регистрация</h2>
 
 @using (Html.BeginForm())
 {
@@ -64,6 +64,12 @@ Layout = "~/Views/Shared/_Layout.cshtml";
                 @Html.EditorFor(model => model.MiddleName)
                 @Html.ValidationMessageFor(model => model.MiddleName)
             </div>
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.File)
+        </div>
+        <div class="editor-field">
+            <input type="file" id="error" name="error" />
         </div>
        
 

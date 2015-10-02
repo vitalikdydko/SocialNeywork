@@ -9,52 +9,41 @@ namespace Web.Models
 {
     public class RegisterModel
     {
-        [Required(ErrorMessageResourceType = typeof(Resources.Resource),
-                          ErrorMessageResourceName = "NameRequired")]
-
-        [Display(Name = "Name", ResourceType = typeof(Resources.Resource))]
+     
+        [Required]
+        [Display(Name = "Логин")]
         public string UserName { get; set; }
 
-        [Required(ErrorMessageResourceType = typeof(Resources.Resource),
-                          ErrorMessageResourceName = "PasswordRequired")]
-
-        [Display(Name = "Password", ResourceType = typeof(Resources.Resource))]
+        [Required]
+        [Display(Name = "Password")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
-        [Required(ErrorMessageResourceType = typeof(Resources.Resource),
-                        ErrorMessageResourceName = "PasswordRequired")]
-
-        [Display(Name = "Password", ResourceType = typeof(Resources.Resource))]
+        [Required]
+        [Display(Name = "Password")]
         [DataType(DataType.Password)]
         [Compare("Password", ErrorMessage = "Пароль подтвержден неверно")]
         public string ConfirmPassword { get; set; }
 
-        [Required(ErrorMessageResourceType = typeof(Resources.Resource),
-                         ErrorMessageResourceName = "EmailRequired")]
-
-        [Display(Name = "Email", ResourceType = typeof(Resources.Resource))]
+        [Required]
+        [Display(Name = "Email")]
         [RegularExpression(@"^[a-zA-Z0-9.-]{1,20}@[a-zA-Z0-9]{1,20}\.[A-Za-z]{2,4}",
             ErrorMessage = "Неверный формат Email")]
         public string Email { get; set; }
 
-        [Required(ErrorMessageResourceType = typeof(Resources.Resource),
-                         ErrorMessageResourceName = "FirstNameRequired")]
-
-        [Display(Name = "FirstName", ResourceType = typeof(Resources.Resource))]
+        [Required]
+        [Display(Name = "Имя")]
         public string FirstName { get; set; }
 
-        [Required(ErrorMessageResourceType = typeof(Resources.Resource),
-                         ErrorMessageResourceName = "SecondNameRequired")]
-
-        [Display(Name = "SecondName", ResourceType = typeof(Resources.Resource))]
+        [Required]
+        [Display(Name = "Фамилия")]
         public string SecondName { get; set; }
 
-        [Required(ErrorMessageResourceType = typeof(Resources.Resource),
-                         ErrorMessageResourceName = "MiddleNameRequired")]
-
-        [Display(Name = "MiddleName", ResourceType = typeof(Resources.Resource))]
+        [Required]
+        [Display(Name = "По-батькови")]
         public string MiddleName { get; set; }
+
+     
        
     }
 }

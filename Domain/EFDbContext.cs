@@ -19,5 +19,8 @@ namespace Domain
         public DbSet<IncomingMessage> IncomingMessages { get; set; }
         public DbSet<OutgoingMessage> OutgoingMessages { get; set; }
         public DbSet<Picture> Pictures { get; set; }
+        public DbSet<Music> Musics { get; set; }
+        public DbSet<Post> Posts { get; set; }
+        public DbSet<Comment> Comments { get; set; }
     }
 }

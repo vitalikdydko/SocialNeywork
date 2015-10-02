@@ -47,11 +47,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EFDbContext.cs" />
+    <Compile Include="Entities\Comment.cs" />
     <Compile Include="Entities\Friend.cs" />
     <Compile Include="Entities\FriendRequest.cs" />
     <Compile Include="Entities\IncomingMessage.cs" />
+    <Compile Include="Entities\Music.cs" />
     <Compile Include="Entities\OutgoingMessage.cs" />
     <Compile Include="Entities\Picture.cs" />
+    <Compile Include="Entities\Post.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

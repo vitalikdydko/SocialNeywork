@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Web.Security;
 
+
 namespace BusinessLogic.Interfaces
 {
    public interface IUserRepository
@@ -21,5 +22,6 @@ namespace BusinessLogic.Interfaces
 
         bool ValidateUser(string userName, string password);
         void SaveUser(User user);
+        
     }
 }

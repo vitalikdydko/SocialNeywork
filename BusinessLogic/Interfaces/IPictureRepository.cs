@@ -8,6 +8,7 @@ namespace BusinessLogic.Interfaces
 {
     public interface IPictureRepository
     {
+         IEnumerable<Picture> PicturesByUserId(int userId);
         IQueryable<Picture> GetPictures{get;}
        void SavePicture(Picture picture);
     }

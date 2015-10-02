@@ -36,6 +36,9 @@ namespace Web
             ninjectKernel.Bind<IFriendRequestsRepository>().To<EFFriendRequestsRepository>();
             ninjectKernel.Bind<IMessagesRepository>().To<EFMessagesRepository>();
             ninjectKernel.Bind<IPictureRepository>().To<EFPictureRepository>();
+            ninjectKernel.Bind<IMusicRepository>().To<EFMusicRepository>();
+            ninjectKernel.Bind<IPostRepository>().To<EFPostRepository>();
+            ninjectKernel.Bind<ICommentRepository>().To<EFCommentRepository>();
             ninjectKernel.Bind<EFDbContext>().ToSelf().WithConstructorArgument("connectionString",
                                                                                ConfigurationManager.ConnectionStrings[0]
                                                                                    .ConnectionString);

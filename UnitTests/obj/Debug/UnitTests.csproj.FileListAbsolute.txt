@@ -3,3 +3,8 @@ C:\Users\Vitalik-PK\Documents\SocialNetwork\UnitTests\bin\Debug\UnitTests.pdb
 C:\Users\Vitalik-PK\Documents\SocialNetwork\UnitTests\obj\Debug\UnitTests.csprojResolveAssemblyReference.cache
 C:\Users\Vitalik-PK\Documents\SocialNetwork\UnitTests\obj\Debug\UnitTests.dll
 C:\Users\Vitalik-PK\Documents\SocialNetwork\UnitTests\obj\Debug\UnitTests.pdb
+C:\SocialNetwork\UnitTests\bin\Debug\UnitTests.dll
+C:\SocialNetwork\UnitTests\bin\Debug\UnitTests.pdb
+C:\SocialNetwork\UnitTests\obj\Debug\UnitTests.csprojResolveAssemblyReference.cache
+C:\SocialNetwork\UnitTests\obj\Debug\UnitTests.dll
+C:\SocialNetwork\UnitTests\obj\Debug\UnitTests.pdb

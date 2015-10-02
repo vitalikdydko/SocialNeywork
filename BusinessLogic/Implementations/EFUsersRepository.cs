@@ -66,6 +66,7 @@ namespace BusinessLogic.Implementations
 
         public void CreateUser(string userName, string password, string email, string firstName, string secondName, string middleName)
         {
+            
             User user = new User
             {
                 UserName = userName,
@@ -75,6 +76,7 @@ namespace BusinessLogic.Implementations
                 FirstName = firstName,
                 SecondName = secondName,
                 MiddleName = middleName
+                
             };
             SaveUser(user);
         }
@@ -95,5 +97,7 @@ namespace BusinessLogic.Implementations
                 context.Entry(user).State = EntityState.Modified;
             context.SaveChanges();
         }
+
+       
     }
 }

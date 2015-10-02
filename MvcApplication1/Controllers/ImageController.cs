@@ -7,10 +7,12 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using Web.Models;
 
 namespace Web.Controllers
 {
+    [Authorize]
     public class ImageController : Controller
     {
         private DataManager dataManager;
@@ -19,24 +21,63 @@ namespace Web.Controllers
             this.dataManager = dataManager;
         }
 
-     //   EFDbContext context = new EFDbContext();
-       
-        public FileContentResult GetImage(int picId)
-        {
-            Picture picture = dataManager.Pictures.GetPictures
-
-                .FirstOrDefault(g => g.Id == picId);
-
-            if (picture != null)
+        
+        public ActionResult Index()
+        { //Подготовляваем картинки кожного користувача
+            List<PictureModel> model = new List<PictureModel>();
+            foreach (Picture picture in dataManager.Pictures.PicturesByUserId((int)Membership.GetUser().ProviderUserKey))
             {
-                return File(picture.ImageData, picture.ImageMineType);
+                model.Add(new PictureModel
+                {
+                    File = picture.File,
+                   
+                });
             }
-            else
-            {
-                return null;
-            }
+            return View(model);
         }
 
+        [HttpGet]
+        public ActionResult CreateImage()
+        {
+                    
+            return View();
 
+        }
+
+        [HttpPost]
+        public ActionResult CreateImage(Picture picture, HttpPostedFileBase file)
+        {
+
+            if (ModelState.IsValid)
+            {
+
+                if (file != null)
+                {
+                                   
+                    // Получаем имя файла
+                    string ImageName = System.IO.Path.GetFileName(file.FileName);
+                    // сохраняем файл по определенному пути на сервере
+                    string physicalPath = Server.MapPath("~/Files/foto/" + ImageName);
+                    //сохраняэм файл в папку
+                    file.SaveAs(physicalPath);
+                    //получаем id користувача
+                    var id = Membership.GetUser().ProviderUserKey;
+                    Picture newRecord = new Picture();
+               
+                    newRecord.UserId =(int) id;
+                    newRecord.File = ImageName;
+                    dataManager.Pictures.SavePicture(newRecord);
+
+                }
+            
+
+                return RedirectToAction("Index","Home");
+            }
+            return View(picture);
+
+
+        }
+
+        
     }
 }

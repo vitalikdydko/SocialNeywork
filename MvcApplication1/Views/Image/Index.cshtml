@@ -1,1 +1,25 @@
-﻿
+﻿@using Web.Models
+@model List<PictureModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Мои изображения</h2>
+
+<p>
+    @Html.ActionLink("Добавить изображение", "CreateImage")
+</p>
+<table>
+   
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            
+            <td><img src="~/Files/foto/@item.File" width="100" height="100" /></td>
+        </tr>
+    }
+
+</table>

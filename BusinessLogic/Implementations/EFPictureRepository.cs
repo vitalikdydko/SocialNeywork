@@ -16,7 +16,10 @@ namespace BusinessLogic.Implementations
         {
             this.context = context;
         }
-
+        public IEnumerable<Picture> PicturesByUserId(int userId)
+        {
+            return context.Pictures.Where(x => x.UserId == userId);
+        }
         public IQueryable<Picture> GetPictures
         {
             get { return context.Pictures; }
@@ -32,9 +35,8 @@ namespace BusinessLogic.Implementations
                 Picture dbEntry = context.Pictures.Find(picture.Id);
                 if (dbEntry != null)
                 {
-
-                    dbEntry.ImageData = picture.ImageData;
-                    dbEntry.ImageMineType = picture.ImageMineType;
+                  
+                    dbEntry.File = picture.File;
                 }
 
             }

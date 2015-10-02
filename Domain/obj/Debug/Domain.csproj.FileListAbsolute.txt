@@ -7,3 +7,13 @@ C:\Users\Vitalik-PK\Documents\SocialNetwork\Domain\bin\Debug\EntityFramework.xml
 C:\Users\Vitalik-PK\Documents\SocialNetwork\Domain\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Vitalik-PK\Documents\SocialNetwork\Domain\obj\Debug\Domain.dll
 C:\Users\Vitalik-PK\Documents\SocialNetwork\Domain\obj\Debug\Domain.pdb
+C:\SocialNetwork\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+C:\SocialNetwork\Domain\obj\Debug\Domain.dll
+C:\SocialNetwork\Domain\obj\Debug\Domain.pdb
+C:\SocialNetwork\Domain\bin\Debug\Domain.dll.config
+C:\SocialNetwork\Domain\bin\Debug\Domain.dll
+C:\SocialNetwork\Domain\bin\Debug\Domain.pdb
+C:\SocialNetwork\Domain\bin\Debug\EntityFramework.dll
+C:\SocialNetwork\Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\SocialNetwork\Domain\bin\Debug\EntityFramework.xml
+C:\SocialNetwork\Domain\bin\Debug\EntityFramework.SqlServer.xml

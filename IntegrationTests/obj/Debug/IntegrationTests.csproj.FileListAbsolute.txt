@@ -3,3 +3,8 @@ C:\Users\Vitalik-PK\Documents\SocialNetwork\IntegrationTests\bin\Debug\Integrati
 C:\Users\Vitalik-PK\Documents\SocialNetwork\IntegrationTests\obj\Debug\IntegrationTests.csprojResolveAssemblyReference.cache
 C:\Users\Vitalik-PK\Documents\SocialNetwork\IntegrationTests\obj\Debug\IntegrationTests.dll
 C:\Users\Vitalik-PK\Documents\SocialNetwork\IntegrationTests\obj\Debug\IntegrationTests.pdb
+C:\SocialNetwork\IntegrationTests\bin\Debug\IntegrationTests.dll
+C:\SocialNetwork\IntegrationTests\bin\Debug\IntegrationTests.pdb
+C:\SocialNetwork\IntegrationTests\obj\Debug\IntegrationTests.csprojResolveAssemblyReference.cache
+C:\SocialNetwork\IntegrationTests\obj\Debug\IntegrationTests.dll
+C:\SocialNetwork\IntegrationTests\obj\Debug\IntegrationTests.pdb

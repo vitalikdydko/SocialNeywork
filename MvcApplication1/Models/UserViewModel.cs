@@ -20,5 +20,6 @@ namespace Web.Models
 
         //Я уже отправил этому пользователю заявку в друзья
         public bool FriendRequestIsSent { get; set; }
+        public Picture UserPicture { get; set; }
     }
 }

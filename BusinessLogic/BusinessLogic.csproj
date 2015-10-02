@@ -55,15 +55,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataManager.cs" />
+    <Compile Include="Implementations\EFCommentRepository.cs" />
     <Compile Include="Implementations\EFFriendRequestsRepository.cs" />
     <Compile Include="Implementations\EFFriendsRepository.cs" />
     <Compile Include="Implementations\EFMessagesRepository.cs" />
+    <Compile Include="Implementations\EFMusicRepository.cs" />
     <Compile Include="Implementations\EFPictureRepository.cs" />
+    <Compile Include="Implementations\EFPostRepository.cs" />
     <Compile Include="Implementations\EFUsersRepository.cs" />
+    <Compile Include="Interfaces\ICommentRepository.cs" />
     <Compile Include="Interfaces\IFriendRequestsRepository.cs" />
     <Compile Include="Interfaces\IFriendsRepository.cs" />
     <Compile Include="Interfaces\IMessagesRepository.cs" />
+    <Compile Include="Interfaces\IMusicRepository.cs" />
     <Compile Include="Interfaces\IPictureRepository.cs" />
+    <Compile Include="Interfaces\IPostRepository.cs" />
     <Compile Include="Interfaces\IUserRepository.cs" />
     <Compile Include="PrimaryMembershipProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

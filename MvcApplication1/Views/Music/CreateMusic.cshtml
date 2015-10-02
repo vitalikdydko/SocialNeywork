@@ -1,0 +1,27 @@
+﻿@using Web.Models
+@model MusicModel
+
+
+@{
+    ViewBag.Title = "CreateMusic";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>CreateMusic</h2>
+    
+
+@using (Html.BeginForm("CreateMusic", "Music", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div>
+
+
+        Music<br />
+        <input type="file" name="file" id="file" style="width: 100%;" /> <br />
+        <input type="submit" value="Upload" class="submit" />
+    </div>
+}
+
+@section Scripts {
+
+    <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+}

@@ -9,16 +9,12 @@ namespace Web.Models
     public class LoginModel
     {
 
-        [Required(ErrorMessageResourceType = typeof(Resources.Resource),
-                        ErrorMessageResourceName = "NameRequired")]
-
-        [Display(Name = "Name", ResourceType = typeof(Resources.Resource))]
+        [Required]
+        [Display(Name = "Логин")]
         public string UserName { get; set; }
 
-        [Required(ErrorMessageResourceType = typeof(Resources.Resource),
-                         ErrorMessageResourceName = "PasswordRequired")]
-
-        [Display(Name = "Password", ResourceType = typeof(Resources.Resource))]
+        [Required]
+        [Display(Name = "Пароль")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
     }

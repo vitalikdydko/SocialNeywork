@@ -56,10 +56,13 @@ namespace Web.Controllers
         {
             if (ModelState.IsValid)
             {
+
+                
                 MembershipCreateStatus status = dataManager.MembershipProvider.CreateUser(model.UserName, model.Password,
                                                                                           model.Email, model.FirstName,
                                                                                           model.SecondName,
-                                                                                          model.MiddleName);
+                                                                                          model.MiddleName
+                                                                                         );
                 if (status == MembershipCreateStatus.Success)
                     return View("Success");
                 ModelState.AddModelError("", GetMembershipCreateStatusResultText(status));
@@ -80,23 +83,7 @@ namespace Web.Controllers
             return View();
         }
 
-        [HttpPost]
-        public ActionResult Edit(Picture pic, HttpPostedFileBase image)
-        {
-            if (ModelState.IsValid && image!=null)
-            {
-                if (image != null)
-                {
-                    pic.ImageMineType = image.ContentType;
-                    pic.ImageData = new byte[image.ContentLength];
-                    image.InputStream.Read(pic.ImageData, 0, image.ContentLength);
-                }
-                dataManager.Pictures.SavePicture(pic);
-                TempData["message"] = string.Format("{0} has been saved", pic.Id);
-                return RedirectToAction("Index");
-            }
-            return View(pic);
-        }
+      
         
         
         
